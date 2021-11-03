@@ -29,10 +29,10 @@ public class TwitterTest {
         List<String> expectedValue = Arrays.asList("First Tweets", "Second Tweet", "Third Tweets");
         List<String> actualResult = twitter.getTweetsFromTwitter(); // real time hit result
         // assert without any library
-        /*  Assert.assertEquals(expectedValue.size(), actualResult.size()); // match size
-            Assert.assertEquals(expectedValue.get(0), actualResult.get(0)); // match 1st element
-            Assert.assertEquals(expectedValue.get(1), actualResult.get(1)); // match 1st element
-            Assert.assertEquals(expectedValue.get(2), actualResult.get(2)); // match 1st element
+        /*  Assert.assertEquals(expectedValue.size(), actualResult.size()); // match size (int)
+            Assert.assertEquals(expectedValue.get(0), actualResult.get(0)); // match 1st element (String)
+            Assert.assertEquals(expectedValue.get(1), actualResult.get(1)); // match 1st element (String)
+            Assert.assertEquals(expectedValue.get(2), actualResult.get(2)); // match 1st element (String)
         */
         // using library hamcrest.core
         Assert.assertThat(actualResult, is(expectedValue));
