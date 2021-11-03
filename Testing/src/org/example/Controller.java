@@ -8,10 +8,12 @@ public class Controller {
     /***
      * Default Constructor
      */
-    Controller() {
+    public Controller() {
         twitter = new Twitter();
     }
-
+    public Controller(Twitter twitter) { // used for testing to send mock twitter object
+        this.twitter = twitter;
+    }
     /***
      *
      * @return list of tweet in org.example.Response Object
